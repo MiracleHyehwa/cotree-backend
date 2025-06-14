@@ -9,6 +9,11 @@
         FROM member
         WHERE email = #{email}
     </select>
+    <select id="getMemberGenderAge" resultType="com.futurenet.cotree.member.dto.response.MemberGenderAgeResponse">
+        SELECT GENDER, AGE_RANGE
+        FROM MEMBER
+        WHERE ID = #{id}
+    </select>
 
     <insert id="saveOAuthMember" parameterType="com.futurenet.cotree.member.dto.request.OAuthSignupRequest"
             useGeneratedKeys="true"

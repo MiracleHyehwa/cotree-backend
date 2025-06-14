@@ -40,7 +40,7 @@
         OFFSET #{start} ROWS FETCH NEXT #{size} ROWS ONLY
     </select>
 
-    <select id="getItemPriceAndIsEcoById">
+    <select id="getItemPriceAndIsEcoById" resultType="com.futurenet.cotree.payment.dto.response.ItemPriceAndIsEcoResponse">
         SELECT price, discount, is_green as isGreen
         FROM item
         WHERE id = #{id}
