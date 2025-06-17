@@ -51,9 +51,9 @@ public class CustomOAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHa
         response.addCookie(ResponseUtil.createCookie("refresh", refreshToken, JwtConstants.REFRESH_COOKIE_EXPIRED));
 
         if (IsSignupCompletedStatus.COMPLETED.getStatus().equals(isSignupCompleted)) {
-            response.sendRedirect("http://localhost:5173/");
+            response.sendRedirect("https://cotree.n-e.kr/");
         } else {
-            response.sendRedirect("http://localhost:5173/login/onboarding");
+            response.sendRedirect("https://cotree.n-e.kr/login/onboarding");
         }
     }
 }
