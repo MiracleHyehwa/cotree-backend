@@ -12,6 +12,7 @@ import com.futurenet.cotree.member.dto.response.MemberGenderAgeResponse;
 import com.futurenet.cotree.member.repository.MemberRepository;
 import com.futurenet.cotree.order.dto.request.OrderItemRegisterRequest;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +22,7 @@ import java.util.stream.Collectors;
 
 import static com.futurenet.cotree.global.constant.PaginationConstants.PAGE_SIZE;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ItemServiceImpl implements ItemService {
@@ -108,4 +110,31 @@ public class ItemServiceImpl implements ItemService {
         }
         eventPublisher.publishEvent(event);
     }
+
+    @Transactional
+    public void decreaseQuantity(Long itemId, int quantity) {
+        log.info("DB 재고 차감 시도: itemId={}, quantity={}", itemId, quantity);
+        Item item = itemRepository.getItem(itemId);
+
+        if (item == null) {
+            throw new ItemException(ItemErrorCode.ITEM_NOT_FOUND);
+        }
+
+        if (item.getQuantity() < quantity) {
+            log.warn("재고 부족 오류: itemId={}, 요청 수량={}, 현재 재고={}", itemId, quantity, item.getQuantity());
+            throw new ItemException(ItemErrorCode.ITEM_QUANTITY_LACK);
+        }
+
+        int updatedRows = itemRepository.decreaseQuantity(itemId, quantity); // ★ 호출 메서드 이름 변경
+
+        // 5. 업데이트 성공 여부를 확인합니다.
+        if (updatedRows == 0) {
+            log.error("재고 차감 실패: itemId={}, quantity={}. 데이터베이스 업데이트가 발생하지 않았습니다.", itemId, quantity);
+            throw new ItemException(ItemErrorCode.ITEM_QUANTITY_LACK);
+        }
+
+        log.info("itemId={} 상품의 재고 {}개 차감 완료 (DB 반영)", itemId, quantity);
+    }
+
+
 }

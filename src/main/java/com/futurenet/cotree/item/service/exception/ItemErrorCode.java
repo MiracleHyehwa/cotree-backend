@@ -9,8 +9,10 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 public enum ItemErrorCode implements ErrorCode {
 
-    ITEM_QUANTITY_LACK("IT000", HttpStatus.BAD_REQUEST);
+    ITEM_QUANTITY_LACK("IT000", HttpStatus.BAD_REQUEST),
 
+    // *** 추가된 에러 코드 ***
+    ITEM_NOT_FOUND("IT001", HttpStatus.NOT_FOUND);
     private final String code;
     private final HttpStatus httpStatus;
 }

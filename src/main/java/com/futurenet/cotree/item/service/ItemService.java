@@ -14,4 +14,5 @@ public interface ItemService {
     List<ItemResponse> searchItems(UserPrincipal userPrincipal, String keyword, Long categoryId, int page, String isGreen);
     List<ItemResponse> getTodayItems();
     void bulkDecreaseStock(List<OrderItemRegisterRequest> orderItemRegisterRequests);
+    void decreaseQuantity(Long itemId, int quantity);
 }

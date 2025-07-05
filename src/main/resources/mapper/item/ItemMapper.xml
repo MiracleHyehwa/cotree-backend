@@ -123,4 +123,18 @@
     </select>
 
 
+    <select id="getItem" resultType="com.futurenet.cotree.item.domain.Item">
+        SELECT id,quantity
+        FROM item
+        WHERE id=#{id}
+        FOR UPDATE
+    </select>
+
+
+    <update id="decreaseQuantity">
+        UPDATE item
+        SET quantity = quantity - #{quantity}
+        WHERE id = #{id}
+        AND quantity >= #{quantity}
+    </update>
 </mapper>
