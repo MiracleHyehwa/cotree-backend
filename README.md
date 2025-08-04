@@ -1,4 +1,4 @@
-# COTREE
+# 🌲 COTREE
 
 
 <p align="center">
@@ -254,7 +254,8 @@
 <div markdown="1">
 
 <br>
-<p align="center"><img src="https://github.com/user-attachments/assets/305aab4a-9189-4a85-9896-d5d0527fb500" width="100%" /></p>
+<p align="center"><img alt="image" src="https://github.com/user-attachments/assets/0ae946d9-1163-40cc-afc8-d446e2ec1493" width="100%" /></p>
+
 
 </div>
 </details>
