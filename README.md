@@ -250,33 +250,4 @@
 </p>
 
 
-## 🖨️ ERD
-<details>
-<summary>ERD 이미지</summary>
-<div markdown="1">
-
-<br>
-<p align="center"><img alt="image" src="https://github.com/user-attachments/assets/0ae946d9-1163-40cc-afc8-d446e2ec1493" width="100%" /></p>
-
-
-</div>
-</details>
-
-## 📊 API 명세서
-<details>
-<summary>API 명세서 보기</summary>
-<div markdown="1">
-
-<br>
-
-![_C__Users_eksk9_Downloads_901e2a7d-ad54-47cc-b5f7-e1cc2e4e9334_Export-1287c9b1-dec8-4988-ac72-1a857eacc8de_API%20%EB%AA%85%EC%84%B8%EC%84%9C%20b162d3111e2d4d0f82f50eb94fed7370 html](https://github.com/user-attachments/assets/d0ca471e-a19d-4595-8581-999280287e41)
-
-
-</div>
-</details>
-
-#### [명세서 자세히 보기](https://acoustic-passive-453.notion.site/API-b162d3111e2d4d0f82f50eb94fed7370?pvs=4)
-
-
-
 
