@@ -27,9 +27,9 @@
   
 ### 👨🏻‍💻 개발 인원
 
-|         <img src="https://github.com/hyeon8571.png" width="150">          |   <img src="https://github.com/sangzun-han.png" width="150">   |
-| :----------------------------------------------------------------------: | :---------------------------------------------------------: |
-| [원승현<br>@hyeon8571](https://github.com/hyeon8571)<br/>`팀장` | [한상준<br>@sangzun-han](https://github.com/sangzun-han)<br/>`팀원` |
+|         <img src="https://github.com/hyeon8571.png" width="150">          |   <img src="https://github.com/sangzun-han.png" width="150">   | <img src="https://github.com/sangzun-han.png" width="150">   |
+| :----------------------------------------------------------------------: | :---------------------------------------------------------: | :---------------------------------------------------------: |
+| [원승현<br>@hyeon8571](https://github.com/hyeon8571)<br/>`팀장` | [한상준<br>@sangzun-han](https://github.com/sangzun-han)<br/>`팀원` | [정석영<br>@sangzun-han](https://github.com/sangzun-han)<br/>`팀원` |
 
 
 
